@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canada Climate Stations</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <p class="eyebrow">Columbia College climate lab</p>
+          <h1>Canada Climate Stations</h1>
+        </div>
+        <div class="search-wrap">
+          <label class="sr-only" for="search">Search weather station</label>
+          <input id="search" type="search" placeholder="Search by Name or ID" autocomplete="off" />
+          <ul id="search-results" hidden></ul>
+        </div>
+        <label class="variable">
+          Temperature
+          <select id="variable">
+            <option value="tavg" selected>Mean</option>
+            <option value="tmax" disabled>Maximum (soon)</option>
+            <option value="tmin" disabled>Minimum (soon)</option>
+          </select>
+        </label>
+      </header>
+
+      <div id="map"></div>
+      <div id="station-label" hidden></div>
+
+      <aside class="legend">
+        <h2>Mean °C</h2>
+        <div class="legend-bar"></div>
+        <div class="legend-scale"><span>−40</span><span>0</span><span>30</span></div>
+      </aside>
+
+      <footer class="timeline">
+        <button id="play" type="button">Play</button>
+        <label class="speed">
+          Speed
+          <select id="speed">
+            <option value="slow">Slow</option>
+            <option value="normal" selected>Normal</option>
+            <option value="fast">Fast</option>
+          </select>
+        </label>
+        <button id="step-back" type="button" title="Previous month">‹</button>
+        <div class="slider-block">
+          <input id="slider" type="range" min="0" max="1" value="0" />
+          <div id="year-ticks" class="year-ticks" aria-hidden="true"></div>
+        </div>
+        <button id="step-forward" type="button" title="Next month">›</button>
+        <div class="clock">
+          <span id="clock-label">January 1880</span>
+          <span id="selected-temp"></span>
+        </div>
+      </footer>
+
+      <div id="status">Loading Canadian station temperatures…</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
