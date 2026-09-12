@@ -74,7 +74,7 @@ h1 {
 }
 
 #search,
-.variable select {
+#variable {
   width: 100%;
   border: 1px solid #c9bfae;
   border-radius: 8px;
@@ -119,12 +119,7 @@ h1 {
 }
 
 .variable {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  min-width: 140px;
+  min-width: 120px;
 }
 
 .legend {
@@ -164,18 +159,20 @@ h1 {
   display: grid;
   grid-template-columns: auto auto auto 1fr auto auto;
   gap: 8px;
-  align-items: center;
+  align-items: start;
   padding: 10px 12px;
   border-radius: 12px;
 }
 
-.timeline button {
+.timeline button,
+#speed {
   border: 1px solid #c9bfae;
   background: #fff;
   border-radius: 8px;
   padding: 7px 10px;
   font: inherit;
   cursor: pointer;
+  height: 36px;
 }
 
 #play {
@@ -187,18 +184,6 @@ h1 {
 
 .speed {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.speed select {
-  border: 1px solid #c9bfae;
-  border-radius: 8px;
-  padding: 6px 8px;
-  font: inherit;
-  background: #fff;
 }
 
 .slider-block {

@@ -1,5 +1,6 @@
 node_modules/
 dist/
+netlify-upload/
 _data/
 public/data/tavg.bin
 .DS_Store
