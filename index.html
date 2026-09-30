@@ -6,6 +6,18 @@
     <title>Canada Climate Stations</title>
   </head>
   <body>
+    <script>
+      if (location.protocol === "file:") {
+        document.write(
+          "<main style='font-family:Segoe UI,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1.5rem;line-height:1.5'>" +
+            "<h1>This file cannot run by itself</h1>" +
+            "<p>The climate map has to be opened from a web address, not by double-clicking <code>index.html</code>.</p>" +
+            "<p>On this computer, run <code>npm run dev</code> and open <a href='http://localhost:5173/'>http://localhost:5173/</a>.</p>" +
+            "<p>For students, use the Netlify or GitHub Pages link after the site is published.</p>" +
+            "</main>",
+        );
+      }
+    </script>
     <div id="app">
       <header class="topbar">
         <div class="brand">
